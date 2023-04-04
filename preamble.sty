@@ -17,7 +17,7 @@
 
 % to have awesome icon 
 \usepackage{fontawesome} 
-\usepackage{fontawesome5}
+%\usepackage{fontawesome5}
 \usepackage{academicons}
 
 % advanced drawing
@@ -116,7 +116,8 @@
 \newcommand{\flag}[1]{\includegraphics[align=c, width=1em]{#1}}
 
 % Command for Education and Works
-\newcommand{\MySection}[7]{ % input: years, logo, title, university, city, specialization, description
+\newcommand{\MySection}[7]{
+% input: years, logo, title, university, city, specialization, description
     \adjustbox{valign=t}{\begin{minipage}{2cm}
         \begin{center}
             {\small \bfseries #1} \\
@@ -125,7 +126,7 @@
         \end{center}
     \end{minipage}}
     \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{8.5cm}
+    \adjustbox{valign=t}{\begin{minipage}{8cm}
         {\normalsize\bfseries #3}
         \hfill {\footnotesize \faMapMarker  ~ #5}
         \newline
