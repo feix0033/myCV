@@ -17,7 +17,7 @@
 
 % to have awesome icon 
 \usepackage{fontawesome} 
-%\usepackage{fontawesome5} 
+\usepackage{fontawesome5}
 \usepackage{academicons}
 
 % advanced drawing
@@ -41,7 +41,7 @@
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{decorations}
 \usetikzlibrary{topaths}
-\usepackage{graphicx}
+%\usepackage{graphicx}
 
 % set TikZ styles
 \tikzset{
@@ -87,6 +87,7 @@
 };%
 \node[draw=none, below](description) at (name.south) {\color{white}#4};% 
 }\vspace{-0.7cm}%
+
 }
 
 % Command Example:
@@ -107,7 +108,7 @@
 % SideBar
 \newcommand{\sidebar}[1]{
 \tikz[remember picture,overlay] {%
-\node[rectangle, fill=#1, anchor=north west, minimum width=7cm, minimum height=\paperheight](header) at (current page.north west){};%
+\node[rectangle, fill=#1, anchor=north west, minimum width=8cm, minimum height=\paperheight](header) at (current page.north west){};%
 }\vspace{-0.7cm}%
 }
 
@@ -154,16 +155,7 @@
     \end{minipage}}
 }
 
-% Publication Section
-\newcommand{\publication}[6]{ % Article/Conference, year, name, authors, journal, DOI
-    \adjustbox{valign=t}{\begin{minipage}{2.5cm}
-    {\small \textbf{#1} \\ \footnotesize #2} \\
-    \end{minipage}}
-    \hfill
-    \adjustbox{valign=t}{\begin{minipage}{8cm}
-        {\footnotesize \textbf{#3}, #4, \textit{#5}, \aiDoi \hspace{0.1mm} \href{https://www.doi.org/#6}{#6}}
-    \end{minipage}}
-}
+
 
 % ITC section
 \newcommand{\ITCcompetence}[2]{ % input: Branch, description
@@ -206,5 +198,5 @@
 
 % Info
 \title{My CV}
-\date{03/10/2022}
-\author{pietro.dileo}
+\date{\today}
+\author{Fei Gu}

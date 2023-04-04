@@ -5,138 +5,99 @@
 \usepackage{preamble}
 \graphicspath{{PIC/}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% first page : caver page
+    %%%%%%%%% FIRST PAGE : Cover page
     \sidebar{sideBarColor!25}
     \simpleheader{titleBackColor}{Fei}{Gu}{Student|Intership|EASV}{white}
-    \vspace*{4cm}% start 3.49 cm from the top of the page}
-    % Here should have a new line
-    
-        \adjustbox{valign=t}{\begin{minipage}{6cm} % large 7.4 cm from the top
-            \vspace*{1.2cm} % text starts 1cm under the top of the minipage
-                % Picture
-                \include{src/side_1_1_myPhoto}
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                % Profile section
-                \ruleline{\textbf{About me}}
-                \include{src/side_1_2_aboutMe}
 
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                % Contact Section
-                \ruleline{\textbf{Contact}}
-                \include{src/side_1_3_contact}
-        \end{minipage}} %
-        \hfill
-        % here should not have a newline
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Cover letter
-        \adjustbox{valign=t}{\begin{minipage}{11.3cm}
+    %%%%%%%%%%%%%%%%%%%     SIDEBAR     %%%%%%%%%%%%%%%%%%%%%%
+    \vspace*{4cm} % Start 4 cm from the top of the page
+    \adjustbox{valign=t}{
+        \begin{minipage}{6cm} % width 6cm
+            \vspace*{1.2cm} % text starts 1cm under the top of the minipage
+            % Picture
+            \include{src/myPhoto}
+            % Profile section
+            \include{src/aboutMe}
+            % Contact Section
+            \include{src/contact}
+        \end{minipage}}
+    \hfill
+    %%%%%%%%%%%%%%%%%%%     Cover Letter     %%%%%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{
+        \begin{minipage}{10cm}
             \vspace*{1.2cm}
             \include{CoverLetter/templet}
-        \end{minipage}} %
-        \hfill
+        \end{minipage}}
+    \hfill
 
+    %%%%%%%%% SECOND PAGE : CV
+    \newpage
+    \sidebar{sideBarColor!25}
+    \newpageheader{titleBackColor}{Fei}{Gu}{Student | Intership | EASV}{white}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% secend page : CV
-\newpage
-\sidebar{sideBarColor!25}
-\newpageheader{titleBackColor}{Fei}{Gu}{Student | Intership | EASV}{white}
+    %%%%%%%%%%%%%%%%%%%        SIDEBAR         %%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{
+        \begin{minipage}{6cm} % large 7.4 cm from the top
+            \vspace*{1.2cm} % text starts 1cm under the top of the minipage
+            % Programming Launguage
+            \ruleline{\textbf{Programming Launguage}}
+            \include{src/ProgrammingLaunguage}
+            % Framworks
+            \ruleline{\textbf{Framworks}}
+            \include{src/Framworks}
+            % Skill and Strengths
+            \ruleline{\textbf{Soft Skills and Strengths}}
+            \vspace*{-0.5cm}
+            \include{src/softSkillAndStrengths}
+%            % Other Interests
+%            \ruleline{\textbf{Other Interests}}
+%            \small
+%            \include{src/side_2_otherInterests}
+            % languages
+            \ruleline{\textbf{Languages}}
+            \include{src/Languages}
+        \end{minipage}}
+    \hfill
+    %%%%%%%%%%%%%%%%%%%     MAIN SECTION     %%%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{
+        \begin{minipage}{10cm}
+            \vspace*{1.2cm}
+            \section*{{\faGraduationCap} EDUCATION}
+            \include{src/education}
+            % Software design campetencies
+            \section*{{\faDesktop}Software design campetencies}
+            \include{src/SoftwareDesign}
+            % Programming Languages
+            \section*{{\faCode} Software develop campetencie}
+            \include{src/SoftwareDevelop}
+         \end{minipage}}
+    \hfill
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
-    \adjustbox{valign=t}{%
-    \begin{minipage}{6cm} % large 7.4 cm from the top
-    \vspace*{1.4cm} % text starts 1cm under the top of the minipage
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \ruleline{\textbf{Languages}}
-    \include{src/side_1_languages}
-    \lipsum[150]
-    \end{minipage}}
-    \hfill 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
-    \adjustbox{valign=t}{\begin{minipage}{11.3cm}
-    \vspace*{1.4cm}
-    
-    \section*{{\faGraduationCap} EDUCATION}
-
-    \MySection{2018-Ongoing}{Ship.png}{Master Degree}{Pirate University}{Tortuga, Caribbean}{Faculty}{A description of your piracy. \\\textbf{Degree: 110/110 cum laude}}
-    
-    \vspace*{0.22cm}
-        
-    \MySection{2016-2018}{Jolly-Roger.png}{Bachelor Degree}{Tortuga Academy}{East Indies}{Buccaneer}{Attacking and robbing ships at sea. \lipsum[150]\\\textbf{Degree: 110/110}}       
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Work Experience
-    \section*{{\faSuitcase} WORK EXPERIENCE}
-    \include{src/main_1_workExperience}
-        
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Publications
-    \section*{{\aiOBP} PUBLICATIONS}
-    \include{src/main_1_publication}
-            
-    \end{minipage}} %
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% third Page
-\newpage
-
-\sidebar{sideBarColor!25}
-\newpageheader{titleBackColor}{Fei}{Gu}{Student | Intership | EASV}{white}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
-\begin{minipage}{6cm} 
-\vspace*{1.4cm} % text starts 0.4cm under the top the header
-        
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Skill and Strengths 
-    \ruleline{\textbf{Soft Skills and Strengths}}
-    \vspace*{-0.5cm}
-    \include{src/side_2_skillAndStrengths}
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Professional Skills 
-    \ruleline{\textbf{Professional Skills}}
-    \include{src/side_2_professionalSkill}
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Other Interests
-    \ruleline{\textbf{Other Interests}}
-    \small
-    \include{src/side_2_otherInterests}
-
-\end{minipage}
-}%
-\hfill
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
-\begin{minipage}{11.3cm}
-    \vspace*{1.4cm}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Peer Reviews
-    \section*{{\faBook} ACADEMIC PEER REVIEWS}
-    \include{src/main_2_academicPeerReviews}
-        
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Information Technology Skills
-    \section*{{\faDesktop} INFORMATION TECHNOLOGY SKILLS}
-    \include{src/main_2_ITSkills}
-    
-
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Programming Languages
-    \section*{{\faCode} PROGRAMMING LANGUAGES}
-    \include{src/main_2_programmingLanguage}
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Certificates
-    \include{src/main_2_certificates}
-
-
-\end{minipage}}
+%    %%%%%%%%% SECOND PAGE : CV
+%    \newpage
+%    \sidebar{sideBarColor!25}
+%    \newpageheader{titleBackColor}{Fei}{Gu}{Student | Intership | EASV}{white}
+%
+%    %%%%%%%%%%%%%%%%%%%        SIDEBAR         %%%%%%%%%%%%%%%%%%%
+%    \adjustbox{valign=t}{
+%        \begin{minipage}{5cm} % large 7.4 cm from the top
+%            \vspace*{1cm} % text starts 1cm under the top of the minipage
+%            % Professional Skills
+%            \ruleline{\textbf{Professional Skills}}
+%            \include{src/ProfessionalSkills}
+%        \end{minipage}}
+%    \hfill
+%    %%%%%%%%%%%%%%%%%%%     MAIN SECTION     %%%%%%%%%%%%%%%%%%%%
+%    \adjustbox{valign=t}{
+%        \begin{minipage}{10cm}
+%            \vspace*{1.2cm}
+%            % Certificates
+%            \include{src/main_2_certificates}
+%            % Work Experience
+%            \section*{{\faSuitcase} WORK EXPERIENCE}
+%            \include{src/main_1_workExperience}
+%         \end{minipage}}
+%    \hfill
 
 \end{document}
