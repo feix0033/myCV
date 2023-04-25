@@ -415,3 +415,5 @@ ASALocalRun/
 .localhistory/
 API/appsettings.json
 API/appsettings.json
+/pdf/
+/CV_pdf/
