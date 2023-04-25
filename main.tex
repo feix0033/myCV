@@ -8,29 +8,33 @@
 \begin{document}
     %%%%%%%%% FIRST PAGE : Cover page
     \sidebar{sideBarColor!25}
-    \simpleheader{titleBackColor}{Fei}{Gu}{Student|Intership|EASV}{white}
+    \simpleheader{titleBackColor}{Fei}{Gu}{Student\ |\ Intership\ |\ EASV}{white}
 
     %%%%%%%%%%%%%%%%%%%     SIDEBAR     %%%%%%%%%%%%%%%%%%%%%%
-    \vspace*{4cm} % Start 4 cm from the top of the page
+    \vspace*{4cm}
     \adjustbox{valign=t}{
         \begin{minipage}{6cm} % width 6cm
-            \vspace*{1.2cm} % text starts 1cm under the top of the minipage
+            \vspace*{1cm}
             % Picture
             \include{src/myPhoto}
             % Profile section
             \include{src/aboutMe}
+            % Expecting position
+            \include{src/expecting}
             % Contact Section
-            \include{src/contact}
+            \include{src/persionalInfo}
         \end{minipage}}
     \hfill
     %%%%%%%%%%%%%%%%%%%     Cover Letter     %%%%%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{
         \begin{minipage}{12cm}
             \vspace*{1.2cm}
-            \include{CoverLetter/templet}
+            \include{CoverLetter/A2i}
+    %%%%%%%%%%%%%%%%%%%     Internship Info     %%%%%%%%%%%%%%%%%%%%%%
+            \vspace*{1.2cm}
+            \include{src/internshipinfomation}
         \end{minipage}}
     \hfill
-
     %%%%%%%%% SECOND PAGE : CV
     \newpage
     \sidebar{sideBarColor!25}
@@ -39,37 +43,49 @@
     %%%%%%%%%%%%%%%%%%%        SIDEBAR         %%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{
         \begin{minipage}{6cm} % large 7.4 cm from the top
-            \vspace*{1.2cm} % text starts 1cm under the top of the minipage
-            % Programming Launguage
-            \ruleline{\textbf{Programming Launguage}}
-            \include{src/ProgrammingLaunguage}
-            % Framworks
-            \ruleline{\textbf{Framworks}}
-            \include{src/Framworks}
-            % Skill and Strengths
-            \ruleline{\textbf{Soft Skills and Strengths}}
-            \vspace*{-0.5cm}
-            \include{src/softSkillAndStrengths}
-%            % Other Interests
-%            \ruleline{\textbf{Other Interests}}
-%            \small
-%            \include{src/side_2_otherInterests}
+            \vspace*{1.5cm} % text starts 1cm under the top of the minipage
+            \section*{}\vspace*{0.5cm}
+
             % languages
-            \ruleline{\textbf{Languages}}
             \include{src/Languages}
+
+            % Area of section
+            \include{src/areaofsection}
+
+            % Programming Launguage
+            \include{src/ProgrammingLaunguage}
+
+            % Framworks
+            \include{src/Framworks}
+
+            % CI/CD Tools
+            \ruleline{\textbf{CI/CD Tools}}
+            \vspace*{-0.5cm}
+            \include{src/CI_CDTools}
+
+%            % Other Interests
+%            \ruleline{\textbf{}}
+%            \small
+%            \include{}
+            % contact
+            \include{src/contact}
+
         \end{minipage}}
     \hfill
     %%%%%%%%%%%%%%%%%%%     MAIN SECTION     %%%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{
         \begin{minipage}{12cm}
             \vspace*{1.2cm}
+
+            % Education
             \include{src/education}
+
             % Software design campetencies
-            \section*{{\faDesktop} Software design campetencies}
             \include{src/SoftwareDesign}
+
             % Programming Languages
-            \section*{{\faCode} Software develop campetencie}
             \include{src/SoftwareDevelop}
+
          \end{minipage}}
     \hfill
 
